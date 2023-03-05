@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "799259943811",
+    "firebase_url": "https://aerofarm-ly-default-rtdb.firebaseio.com",
+    "project_id": "aerofarm-ly",
+    "storage_bucket": "aerofarm-ly.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:799259943811:android:9c6fcb7378d08775f7ccb6",
+        "android_client_info": {
+          "package_name": "com.example.aerofarm_firebase"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "799259943811-n5bedupdommk3j4fdiqeitfpka2s0bhd.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDzNCoBIAf_RxcnUbZQOZVUOZwmJDh2nVM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "799259943811-n5bedupdommk3j4fdiqeitfpka2s0bhd.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "799259943811-nriteq123j55l1uethn5n22bdosdjaua.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.aerofarmFirebase"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>799259943811-nriteq123j55l1uethn5n22bdosdjaua.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.799259943811-nriteq123j55l1uethn5n22bdosdjaua</string>
+	<key>API_KEY</key>
+	<string>AIzaSyD2WoBgR34LYmaMGM94J35XfdVnHH8pxCo</string>
+	<key>GCM_SENDER_ID</key>
+	<string>799259943811</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.example.aerofarmFirebase</string>
+	<key>PROJECT_ID</key>
+	<string>aerofarm-ly</string>
+	<key>STORAGE_BUCKET</key>
+	<string>aerofarm-ly.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:799259943811:ios:a5892a0bbeb463eef7ccb6</string>
+	<key>DATABASE_URL</key>
+	<string>https://aerofarm-ly-default-rtdb.firebaseio.com</string>
+</dict>
+</plist>
