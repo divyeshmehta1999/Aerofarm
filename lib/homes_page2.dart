@@ -21,6 +21,9 @@ class _HomesPage2State extends State<HomesPage2> {
   //padding Constants
   final double horizontalPadding = 40;
   final double verticalPadding = 25;
+  double get ContainerHeight => MediaQuery.of(context).size.height * 0.55;
+  double get ContainerWidth => MediaQuery.of(context).size.width * 1;
+
 
   @override
   Widget build(BuildContext context) {
@@ -61,7 +64,7 @@ class _HomesPage2State extends State<HomesPage2> {
       ),
       body: SingleChildScrollView(
         child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
+          crossAxisAlignment: CrossAxisAlignment.center,
           children:
           //appBar
           [
@@ -86,142 +89,157 @@ class _HomesPage2State extends State<HomesPage2> {
 
             Padding(
               padding: EdgeInsets.symmetric(horizontal: horizontalPadding),
-              child: Text('Sensors',style: TextStyle(fontSize: 20),),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.start,
+                children: [
+                  Text('Sensors',style: TextStyle(fontSize: 20),),
+                ],
+              ),
             ),
             SizedBox(height: 20,),
 
             //grid
-            Column(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
+            Container(
+              height: ContainerHeight,
+              width: ContainerWidth,
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Padding(
+                    padding:  EdgeInsets.symmetric(
+                      vertical: 10,
+                      horizontal: 25,),
+                    child: Row(
+                      children: [
 
-                Padding(
-                  padding:  EdgeInsets.symmetric(vertical: verticalPadding,horizontal: horizontalPadding,),
-                  child: Row(
-                    children: [
-                      Container(
-                        height: 200,
-                        width: 160,
-                        child: Card(
-                          shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(24)),
-                          color: Colors.grey[400],
-                          elevation: 5,
-                          child: Column(
-                            children: [
-                              Padding(
-                                padding: const EdgeInsets.only(top: 40.0,right: 10),
-                                child: GestureDetector(onTap: (){
-                                  Navigator.push(context, MaterialPageRoute(builder: (context)=> const TemperaturePage()));
-                                },
-                                    child: Image.asset('lib/icons/temperature.png',scale: 6,)),
-                              ),
-                              SizedBox(height: 20,),
-                              Text('Temperature',style: TextStyle(
-                                fontSize: 20,
-                                fontWeight: FontWeight.bold,
-                              ),)
-                            ],
+                        //temperature
+                        Container(
+                          height: 200,
+                          width: 150,
+                          child: Card(
+                            shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(24)),
+                            color: Colors.grey[400],
+                            elevation: 5,
+                            child: Column(
+                              children: [
+                                Padding(
+                                  padding: const EdgeInsets.only(top: 40.0,right: 10),
+                                  child: GestureDetector(onTap: (){
+                                    Navigator.push(context, MaterialPageRoute(builder: (context)=> TemperaturePage()));
+                                  },
+                                      child: Image.asset('lib/icons/temperature.png',scale: 6,)),
+                                ),
+                                SizedBox(height: 20,),
+                                Text('Temperature',style: TextStyle(
+                                  fontSize: 20,
+                                  fontWeight: FontWeight.bold,
+                                ),)
+                              ],
+                            ),
                           ),
                         ),
-                      ),
 
-                      SizedBox(width: 10,),
-                      Container(
-                        height: 200,
-                        width: 160,
-                        child: Card(
-                          shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(24)),
-                          color: Colors.grey[400],
-                          elevation: 5,
-                          child: Column(
-                            children: [
-                              Padding(
-                                padding: const EdgeInsets.only(top: 25.0,right: 0),
-                                child: GestureDetector(onTap: (){
-                                  Navigator.push(context, MaterialPageRoute(builder: (context)=> const SoilMoisturePage()));
-                                },
-                                    child: Image.asset('lib/icons/soilmoisture.png',scale: 5,)),
-                              ),
-                              SizedBox(height: 20,),
-                              Text('Soil Moisture',style: TextStyle(
-                                fontSize: 20,
-                                fontWeight: FontWeight.bold,
-                              ),)
-                            ],
+                        SizedBox(width: 10,),
+
+                        //soilmoisture
+                        Container(
+                          height: 200,
+                          width: 150,
+                          child: Card(
+                            shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(24)),
+                            color: Colors.grey[400],
+                            elevation: 5,
+                            child: Column(
+                              children: [
+                                Padding(
+                                  padding: const EdgeInsets.only(top: 25.0,right: 0),
+                                  child: GestureDetector(onTap: (){
+                                    Navigator.push(context, MaterialPageRoute(builder: (context)=> const SoilMoisturePage()));
+                                  },
+                                      child: Image.asset('lib/icons/soilmoisture.png',scale: 5,)),
+                                ),
+                                SizedBox(height: 20,),
+                                Text('Soil Moisture',style: TextStyle(
+                                  fontSize: 20,
+                                  fontWeight: FontWeight.bold,
+                                ),)
+                              ],
+                            ),
                           ),
-
                         ),
-                      ),
-                    ],
+                      ],
+                    ),
                   ),
 
-                ),
+                  //lights
 
-                Padding(
-                  padding: EdgeInsets.symmetric(vertical: verticalPadding,horizontal: horizontalPadding,),
-                  child: Row(
-                    children: [
-                      Container(
-                        height: 200,
-                        width: 160,
-                        child: Card(
-                          shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(24)),
-                          color: Colors.grey[400],
-                          elevation: 5,
-                          child: Column(
-                            children: [
-                              Padding(
-                                padding: const EdgeInsets.only(top: 40.0,right: 5),
-                                child: GestureDetector(onTap: (){
-                                  Navigator.push(context, MaterialPageRoute(builder: (context)=> const LightPage()));
-                                },
-                                    child: Image.asset('lib/icons/light.png',scale: 6,)),
-                              ),
-                              SizedBox(height: 20,),
-                              Text('Lights',style: TextStyle(
-                                fontSize: 20,
-                                fontWeight: FontWeight.bold,
-                              ),)
-                            ],
+                  Padding(
+                    padding: EdgeInsets.symmetric(vertical: 10,
+                        horizontal: 25),
+                    child: Row(
+                      children: [
+                        Container(
+                          height: 200,
+                          width: 150,
+                          child: Card(
+                            shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(24)),
+                            color: Colors.grey[400],
+                            elevation: 5,
+                            child: Column(
+                              children: [
+                                Padding(
+                                  padding: const EdgeInsets.only(top: 40.0,right: 5),
+                                  child: GestureDetector(onTap: (){
+                                    Navigator.push(context, MaterialPageRoute(builder: (context)=> const LightPage()));
+                                  },
+                                      child: Image.asset('lib/icons/light.png',scale: 6,)),
+                                ),
+                                SizedBox(height: 20,),
+                                Text('Lights',style: TextStyle(
+                                  fontSize: 20,
+                                  fontWeight: FontWeight.bold,
+                                ),)
+                              ],
+                            ),
                           ),
                         ),
-                      ),
 
 
 
-                      SizedBox(width: 10,),
+                        SizedBox(width: 10,),
 
-                      //
-                      Container(
-                        height: 200,
-                        width: 160,
-                        child: Card(
-                          shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(24)),
-                          color: Colors.grey[400],
-                          elevation: 5,
-                          child: Column(
-                            children: [
-                              Padding(
-                                padding: const EdgeInsets.only(top: 25.0,right: 0),
-                                child: GestureDetector(onTap: (){
-                                  Navigator.push(context, MaterialPageRoute(builder: (context)=> const WaterParametersPage()));
-                                },
-                                    child: Image.asset('lib/icons/drop.png',scale: 5,)),
-                              ),
-                              SizedBox(height: 20,),
-                              Text('Water',style: TextStyle(
-                                fontSize: 20,
-                                fontWeight: FontWeight.bold,
-                              ),)
-                            ],
+                        //waterparameters
+                        Container(
+                          height: 200,
+                          width: 150,
+                          child: Card(
+                            shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(24)),
+                            color: Colors.grey[400],
+                            elevation: 5,
+                            child: Column(
+                              children: [
+                                Padding(
+                                  padding: const EdgeInsets.only(top: 25.0,right: 0),
+                                  child: GestureDetector(onTap: (){
+                                    Navigator.push(context, MaterialPageRoute(builder: (context)=> const WaterParametersPage()));
+                                  },
+                                      child: Image.asset('lib/icons/drop.png',scale: 5,)),
+                                ),
+                                SizedBox(height: 20,),
+                                Text('Water',style: TextStyle(
+                                  fontSize: 20,
+                                  fontWeight: FontWeight.bold,
+                                ),)
+                              ],
+                            ),
                           ),
                         ),
-                      ),
-                    ],
+                      ],
+                    ),
                   ),
-                ),
-              ],
+                ],
+              ),
             ),
           ],
         ),

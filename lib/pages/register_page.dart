@@ -13,7 +13,6 @@ class RegisterPage extends StatefulWidget {
 class _RegisterPageState extends State<RegisterPage> {
   //text controller for email and password
   final _nameController = TextEditingController();
-
   final _emailController = TextEditingController();
   final _passWordController = TextEditingController();
   final _confirmPassWordController = TextEditingController();
@@ -190,7 +189,7 @@ class _RegisterPageState extends State<RegisterPage> {
                         color: Colors.deepPurple,
                         border: Border.all(color: Colors.white),
                         borderRadius: BorderRadius.circular(12),),
-                      child: Center(child: Text('Sign In'),
+                      child: Center(child: Text('Sign Up', style: TextStyle(color: Colors.white),),
                       ),
                     ),
                   ),

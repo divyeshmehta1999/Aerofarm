@@ -41,6 +41,8 @@ dependencies:
   cloud_firestore: ^4.4.3
   hidden_drawer_menu: ^3.0.1
   material_scrollbar: ^0.0.1
+  flutter_launcher_icons: ^0.12.0
+  firebase_database: ^10.0.14
 
 dev_dependencies:
   flutter_test:
